@@ -27,9 +27,16 @@ public class OrderApiPattern extends ScooterRestPattern {
     public ValidatableResponse orderAcceptance (String orderId, String courierId) {
         return given()
                 .spec(getBaseSpec())
-                .queryParam("id", orderId)
                 .queryParam("courierId", courierId)
-                .put(ORDER_PATH + "accept/")
+                .put(ORDER_PATH + "accept/" + orderId)
+                .then();
+    }
+
+    @Step("Accept the order without order id")
+    public ValidatableResponse orderAcceptanceWithoutOrder (String courierId) {
+        return given()
+                .spec(getBaseSpec())
+                .put(ORDER_PATH + "accept/" + "courierId =" + courierId)
                 .then();
     }
 

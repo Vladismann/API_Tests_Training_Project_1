@@ -27,7 +27,19 @@ public class TakingOrdersTests {
         String orderId = orderApi.getByTrackNumber(trackNumber).extract().path("order.id").toString();
 
         ValidatableResponse response = orderApi.orderAcceptance(orderId, COURIER_ID);
-        response.statusCode(200).and().assertThat().body("ok", is("true"));
+        response.statusCode(200).and().assertThat().body("ok", is(true));
+    }
+
+    @Test
+    @DisplayName("Check the status code and the server response after taking the order which already taken")
+    public void acceptanceOfOrderWhichAlreadyTaken() {
+        //Получаем id нового заказа, чтобы применить его в запросе принятия заказа, принимаем заказ два раза и на второй раз проверяем
+        int trackNumber = orderApi.create(order).extract().path("track");
+        String orderId = orderApi.getByTrackNumber(trackNumber).extract().path("order.id").toString();
+        orderApi.orderAcceptance(orderId, COURIER_ID);
+
+        ValidatableResponse response = orderApi.orderAcceptance(orderId, COURIER_ID);
+        response.statusCode(409).and().assertThat().body("message", is("Этот заказ уже в работе"));
     }
 
     //Проверка, что нельзя принять заказ без id курьера
@@ -66,8 +78,9 @@ public class TakingOrdersTests {
     @Test
     @DisplayName("Check the status code and the server response after taking the new order by empty order id and courier id")
     public void acceptanceOfNewOrderWithoutOrderId() {
-        ValidatableResponse response = orderApi.orderAcceptance("", COURIER_ID);
+        ValidatableResponse response = orderApi.orderAcceptanceWithoutOrder(COURIER_ID);
         response.statusCode(400).and().assertThat().body("message", is("Недостаточно данных для поиска"));
     }
+
 
 }
