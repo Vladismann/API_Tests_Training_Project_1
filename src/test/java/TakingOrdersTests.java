@@ -2,6 +2,7 @@ import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;
 import org.junit.Before;
 import org.junit.Test;
+
 import static org.hamcrest.core.Is.is;
 
 public class TakingOrdersTests {
@@ -78,9 +79,8 @@ public class TakingOrdersTests {
     @Test
     @DisplayName("Check the status code and the server response after taking the new order by empty order id and courier id")
     public void acceptanceOfNewOrderWithoutOrderId() {
-        ValidatableResponse response = orderApi.orderAcceptanceWithoutOrder(COURIER_ID);
+        ValidatableResponse response = orderApi.orderAcceptance("", COURIER_ID);
         response.statusCode(400).and().assertThat().body("message", is("Недостаточно данных для поиска"));
     }
-
 
 }

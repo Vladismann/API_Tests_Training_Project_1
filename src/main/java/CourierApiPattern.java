@@ -1,6 +1,7 @@
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
+
 import static io.restassured.RestAssured.given;
 
 public class CourierApiPattern extends ScooterRestPattern {
@@ -8,9 +9,10 @@ public class CourierApiPattern extends ScooterRestPattern {
     private static final String COURIER_PATH = "api/v1/courier/";
 
     @Step("Create a courier")
-    public ValidatableResponse create (CourierDataPattern courier) {
+    public ValidatableResponse create(CourierDataPattern courier) {
 
         return given()
+                .log().all()
                 .spec(getBaseSpec())
                 .body(courier)
                 .post(COURIER_PATH)
@@ -18,9 +20,9 @@ public class CourierApiPattern extends ScooterRestPattern {
     }
 
     @Step("Login of the courier")
-    public ValidatableResponse login (CourierDataPattern courier) {
+    public ValidatableResponse login(CourierDataPattern courier) {
 
-        return given()
+        return given().log().all()
                 .spec(getBaseSpec())
                 .body(courier)
                 .post(COURIER_PATH + "login")
@@ -28,16 +30,18 @@ public class CourierApiPattern extends ScooterRestPattern {
     }
 
     @Step("Remove the courier")
-    public ValidatableResponse delete (CourierDataPattern courier) {
+    public ValidatableResponse delete(CourierDataPattern courier) {
 
         Response response = given()
+                .log().all()
                 .spec(getBaseSpec())
                 .body(courier)
                 .post(COURIER_PATH + "login");
 
-        int newCourierId = Integer.parseInt(response.body().asString().replaceAll("\\D+",""));
+        int newCourierId = Integer.parseInt(response.body().asString().replaceAll("\\D+", ""));
 
         return given()
+                .log().all()
                 .spec(getBaseSpec())
                 .and()
                 .delete(COURIER_PATH + newCourierId)
@@ -45,9 +49,10 @@ public class CourierApiPattern extends ScooterRestPattern {
     }
 
     @Step("Remove the courier without id")
-    public ValidatableResponse deleteWithoutId () {
+    public ValidatableResponse deleteWithoutId() {
 
         return given()
+                .log().all()
                 .spec(getBaseSpec())
                 .and()
                 .delete(COURIER_PATH)

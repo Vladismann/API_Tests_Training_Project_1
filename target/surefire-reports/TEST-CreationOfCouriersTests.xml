@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="CreationOfCouriersTests" time="6.938" tests="4" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="CreationOfCouriersTests" time="7.97" tests="4" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="RU"/>
     <property name="sun.boot.library.path" value="D:\Program files\Amazon corretto\jdk17.0.1_12\bin"/>
-    <property name="sun.java.command" value="C:\Users\762\AppData\Local\Temp\surefire8055494760688473181\surefirebooter2091608114457767854.jar C:\Users\762\AppData\Local\Temp\surefire8055494760688473181 2022-03-07T23-02-10_943-jvmRun1 surefire12853799639910073787tmp surefire_012118955772836560191tmp"/>
+    <property name="sun.java.command" value="C:\Users\762\AppData\Local\Temp\surefire7509333161815717101\surefirebooter447426781461400100.jar C:\Users\762\AppData\Local\Temp\surefire7509333161815717101 2022-03-10T20-11-26_463-jvmRun1 surefire17422156985845977970tmp surefire_08905551303093733791tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="D:\CygWin64\home\Vlad\Sprint_3\target\test-classes;D:\CygWin64\home\Vlad\Sprint_3\target\classes;C:\Users\762\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\762\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\762\.m2\repository\io\rest-assured\rest-assured\4.5.1\rest-assured-4.5.1.jar;C:\Users\762\.m2\repository\org\codehaus\groovy\groovy\3.0.9\groovy-3.0.9.jar;C:\Users\762\.m2\repository\org\codehaus\groovy\groovy-xml\3.0.9\groovy-xml-3.0.9.jar;C:\Users\762\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\762\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\762\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\762\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\762\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\762\.m2\repository\org\hamcrest\hamcrest\2.1\hamcrest-2.1.jar;C:\Users\762\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\762\.m2\repository\io\rest-assured\json-path\4.5.1\json-path-4.5.1.jar;C:\Users\762\.m2\repository\org\codehaus\groovy\groovy-json\3.0.9\groovy-json-3.0.9.jar;C:\Users\762\.m2\repository\io\rest-assured\rest-assured-common\4.5.1\rest-assured-common-4.5.1.jar;C:\Users\762\.m2\repository\io\rest-assured\xml-path\4.5.1\xml-path-4.5.1.jar;C:\Users\762\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\762\.m2\repository\io\qameta\allure\allure-junit4\2.17.3\allure-junit4-2.17.3.jar;C:\Users\762\.m2\repository\io\qameta\allure\allure-java-commons\2.17.3\allure-java-commons-2.17.3.jar;C:\Users\762\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\762\.m2\repository\io\qameta\allure\allure-model\2.17.3\allure-model-2.17.3.jar;C:\Users\762\.m2\repository\io\qameta\allure\allure-rest-assured\2.17.3\allure-rest-assured-2.17.3.jar;C:\Users\762\.m2\repository\io\qameta\allure\allure-attachments\2.17.3\allure-attachments-2.17.3.jar;C:\Users\762\.m2\repository\org\freemarker\freemarker\2.3.31\freemarker-2.3.31.jar;C:\Users\762\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.13.1\jackson-databind-2.13.1.jar;C:\Users\762\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.13.1\jackson-annotations-2.13.1.jar;C:\Users\762\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.13.1\jackson-core-2.13.1.jar;"/>
     <property name="allure.results.directory" value="D:\CygWin64\home\Vlad\Sprint_3\target/allure-results"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\762\AppData\Local\Temp\surefire8055494760688473181\surefirebooter2091608114457767854.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\762\AppData\Local\Temp\surefire7509333161815717101\surefirebooter447426781461400100.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.1+12-LTS"/>
@@ -59,8 +59,8 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="cantCreateTheSameCourier" classname="CreationOfCouriersTests" time="4.737"/>
-  <testcase name="cantCreateTheCourierWithoutPassword" classname="CreationOfCouriersTests" time="0.726"/>
-  <testcase name="successfulCreationOfCourier" classname="CreationOfCouriersTests" time="0.654"/>
-  <testcase name="cantCreateTheCourierWithoutLogin" classname="CreationOfCouriersTests" time="0.618"/>
+  <testcase name="cantCreateTheSameCourier" classname="CreationOfCouriersTests" time="5.683"/>
+  <testcase name="cantCreateTheCourierWithoutPassword" classname="CreationOfCouriersTests" time="0.716"/>
+  <testcase name="successfulCreationOfCourier" classname="CreationOfCouriersTests" time="0.719"/>
+  <testcase name="cantCreateTheCourierWithoutLogin" classname="CreationOfCouriersTests" time="0.641"/>
 </testsuite>

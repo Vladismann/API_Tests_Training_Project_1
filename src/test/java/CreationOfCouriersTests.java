@@ -4,6 +4,7 @@ import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
 import static org.hamcrest.core.Is.is;
 
 public class CreationOfCouriersTests {
@@ -28,7 +29,7 @@ public class CreationOfCouriersTests {
     //В конце каждого теста удаляем созданного курьера
     @After
     public void after() {
-         courierApi.delete(courierForRemove);
+        courierApi.delete(courierForRemove);
     }
 
 
@@ -46,8 +47,7 @@ public class CreationOfCouriersTests {
     public void cantCreateTheSameCourier() {
         courierApi.create(courier);
         ValidatableResponse response = courierApi.create(courier);
-        response.statusCode(409).and().assertThat()
-                .body("message", is("Этот логин уже используется. Попробуйте другой."));
+        response.statusCode(409).and().assertThat().body("message", is("Этот логин уже используется. Попробуйте другой."));
     }
 
     //Проверка, что нельзя создать курьера без пароля
@@ -55,8 +55,7 @@ public class CreationOfCouriersTests {
     @DisplayName("Check the status code and the server response after creation of the courier without password")
     public void cantCreateTheCourierWithoutPassword() {
         ValidatableResponse response = courierApi.create(courierWithoutPassword);
-        response.statusCode(400).and().assertThat()
-                .body("message", is("Недостаточно данных для создания учетной записи"));
+        response.statusCode(400).and().assertThat().body("message", is("Недостаточно данных для создания учетной записи"));
     }
 
     //Проверка, что нельзя создать курьера без логина
@@ -64,8 +63,7 @@ public class CreationOfCouriersTests {
     @DisplayName("Check the status code and the server response after creation of the courier without login")
     public void cantCreateTheCourierWithoutLogin() {
         ValidatableResponse response = courierApi.create(courierWithoutLogin);
-        response.statusCode(400).and().assertThat()
-                .body("message", is("Недостаточно данных для создания учетной записи"));
+        response.statusCode(400).and().assertThat().body("message", is("Недостаточно данных для создания учетной записи"));
     }
 
 }
