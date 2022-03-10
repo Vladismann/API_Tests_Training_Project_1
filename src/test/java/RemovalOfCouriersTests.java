@@ -3,6 +3,7 @@ import io.restassured.response.ValidatableResponse;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.Before;
 import org.junit.Test;
+
 import static org.hamcrest.core.Is.is;
 
 public class RemovalOfCouriersTests {
