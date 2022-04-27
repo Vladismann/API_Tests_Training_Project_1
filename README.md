@@ -1,1 +1,1 @@
-Учебный проект, который содержит API тесты, паттерны для API и подключение allure report.
+The tutorial project that contains API tests, API patterns, and the allure report connection.
