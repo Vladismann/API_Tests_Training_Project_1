@@ -1,1 +1,1 @@
-The tutorial project that contains API tests, API patterns, and the allure report connection.
+The tutorial project that contains API tests with REST Assured, API patterns, and the allure report connection.
